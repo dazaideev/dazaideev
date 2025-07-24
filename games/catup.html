@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CatUp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Doto', monospace;
+      background-image: url('../res/bg.gif');
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .marquee {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: black;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 9999;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .container {
+      background-color: black;
+      color: white;
+      width: 40vw;
+      border: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      margin-top: 30px;
+    }
+
+    .header, .footer {
+      padding: 20px;
+      border-bottom: 0px solid white;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: auto;
+      border-top: 1px solid white;
+      border-bottom: none;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav {
+      margin-top: 10px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .nav a:visited,
+    .footer a:visited,
+    .footer a,
+    .nav a:hover {
+      color: white;
+    }
+
+    .section {
+      border-top: 1px dotted white;
+      padding: 20px;
+      flex-shrink: 0;
+      margin: 0 20px;
+    }
+
+    .section:first-child {
+      border-top: none;
+    }
+
+    .game-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .game-buttons img {
+      width:300px;
+      height: 250x;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .game-buttons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee">
+    <div class="marquee-text">WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME</div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo">CatUp</div>
+            <div class="nav">
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>About</h3>
+      <p>CatUp is an engaging platform arcade game where you play the role of a mother cat searching for her five missing kittens. Your epic journey takes you through four diverse biomes: vast and perilous caves, plains, hills, and mysterious floating islands. To overcome the obstacles you encounter, you'll need to showcase exceptional gaming skills.</p>
+      <p>During this adventure, you'll have the opportunity to collect valuable items, such as valuable diamonds that can help you uncover hidden treasures and secrets. Besides diamonds, you'll find secret passages that allow you to complete the game more quickly and efficiently, adding an extra layer of strategy to your journey.</p>
+      <p>The entire adventure in CatUp is enriched with a self-composed soundtrack. Immerse yourself in the fascinating journey of a mother cat, explore unknown lands, collect valuable diamonds, and find your missing kittens, experiencing incredible adventures in CatUp</p>
+    </div>
+
+    <div class="section">
+      <h3>Library</h3>
+      <div class="game-buttons">    
+        <img src="../res/cu/ss1.png" alt="ss1" title="ss1" />
+        <img src="../res/cu/ss2.png" alt="ss1" title="ss1" />
+        <img src="../res/cu/ss3.png" alt="ss1" title="ss1" />
+        <img src="../res/cu/ss4.png" alt="ss1" title="ss1" />
+      </div>
+    </div>
+
+
+    <div class="section">
+        <center>
+            <a href="https://github.com/autoselff/autoselff/releases/download/v0.9.0/CatUp.v1.4.1.windows.-.complete.edition.zip">
+            <button>Download (Windows) - also works on Linux via Wine</button>
+            </a>
+        </center>
+    </div>
+
+
+    <div class="footer">
+      <a href="https://github.com/autoselff">GITHUB</a> <a href=""> | </a>
+      <a href="https://www.youtube.com/@dazaidev">YOUTUBE</a> <a href=""> | </a>
+      <a href="https://x.com/dazaidev">X</a>
+    </div>
+  </div>
+</body>
+</html>
