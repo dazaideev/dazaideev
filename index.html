@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AUTOSELFF</title>
+  <title>autoselff</title>
   <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Workbench?categoryFilters=Appearance:%2FTheme%2FPixel" rel="stylesheet">
+
   <style>
     html, body {
       margin: 0;
@@ -17,6 +19,7 @@
       background-position: center;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
     }
 
     .marquee {
@@ -31,9 +34,27 @@
     }
 
     .marquee-text {
+      font-family: 'Doto', monospace;
+      font-weight: 900;
+      line-height: 1.6;
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-left 15s linear infinite;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    p {
+      font-family: 'Doto', monospace;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     @keyframes scroll-left {
@@ -42,32 +63,32 @@
     }
 
     .container {
+      width: 95vw;
+      max-width: 800px;
       background-color: black;
       color: white;
-      width: 40vw;
       border: 2px solid white;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      height: 100%;
+      min-height: 95vh;
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
-      margin-top: 30px;
+      margin-top: 50px;
+      padding-bottom: 20px;
     }
 
     .header, .footer {
       padding: 20px;
-      border-bottom: 0px solid white;
       text-align: center;
     }
 
     .footer {
       margin-top: auto;
       border-top: 1px solid white;
-      border-bottom: none;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: bold;
     }
 
@@ -75,24 +96,23 @@
       margin-top: 10px;
     }
 
-    .nav a {
+    .nav a,
+    .footer a {
       color: white;
       text-decoration: none;
       margin: 0 10px;
     }
 
-    .nav a:visited,
-    .footer a:visited,
-    .footer a,
-    .nav a:hover {
+    .nav a:hover,
+    .footer a:hover {
       color: white;
+      text-decoration: underline;
     }
 
     .section {
       border-top: 1px dotted white;
       padding: 20px;
-      flex-shrink: 0;
-      margin: 0 20px;
+      margin: 0 10px;
     }
 
     .section:first-child {
@@ -101,22 +121,34 @@
 
     .game-buttons {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       margin-top: 15px;
     }
 
     .game-buttons img {
-      width:108px;
-      height: 92px;
+      width: 100px;
+      height: auto;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
 
     .game-buttons img:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
-  </style>
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    center img {
+      margin: 4px;
+    }
+</style>
 </head>
+
 <body>
   <div class="marquee">
     <div class="marquee-text">Where the only thing optimized is fun — not profits. Heard of folks like that? If not, check out the work of Mike Klubnika, Chudy Dredd, tokyo spliff, and the late Terry Davis.</div>
@@ -140,39 +172,44 @@
     </div>
 
     <div class="section">
-      <h3>About</h3>
+      <h2>About</h2>
       <p>
-        I'm Autoself, formerly known as Dazaidev. I'm currently 19 years old and a self-taught programmer. I mainly focus on game development, but I’m also exploring cybersecurity as a hobby for now.
-        Over the past few years, I’ve created games like CatUP, Heart Keeper, and Rocket Program. Right now, I’m working on a new cyberpunk-style PS1-era game together with @_meta_dev_, which will likely be released in the coming months.
+        I'm Autoself, also known as Dazaidev. I'm currently 19 years old and a self-taught programmer. I mainly focus on game development, but I’m also exploring cybersecurity as a hobby for now.
+        Over the past few years, I’ve created games like CatUP, Heart Keeper, and Rocket Program. Right now, I’m working on a new cyberpunk-style PS1-era game, which will likely be released in the coming months.
       </p>
       <p>More information coming soon :)</p>
     </div>
 
     <div class="section">
-      <h3>Games</h3>
+      <h2>Games</h2>
       <div class="game-buttons">
         <a href="https://store.steampowered.com/app/3449870/Heart_Keeper/">
-          <img src="res/hk.png" alt="Heart Keeper" title="Heart Keeper" />
+          <img src="res/hk.png" alt="HeartKeeper" title="HeartKeeper" />
         </a>
         <a href="games/rocket-program.html">
-          <img src="res/rp.png" alt="Rocket Program" title="Rocket Program" />
+          <img src="res/rp.png" alt="RocketProgram" title="RocketProgram" />
         </a>
         <a href="games/catup.html">
           <img src="res/cu.png" alt="CatUp" title="CatUp" />
         </a>
-        <a href="https://dazaidev.itch.io/driftage-prototype">
+        <a href="games/drift-age.html">
           <img src="res/da.png" alt="DriftAge" title="DriftAge" />
         </a>
         <a href="games/yume.html">
           <img src="res/yu.png" alt="YUME" title="YUME" />
+        </a>
+        <a href="games/hyper-dissonance.html">
+          <img src="res/hd.png" alt="HyperDissonance" title="HyperDissonance" />
         </a>
       </div>
     </div>
 
 
     <div class="section">
-      <h3>Registry</h3>
-      <p>[NEW] Coming soon</p>
+      <h2>Registry</h2>
+      <center>
+        <a href="posts/01-05-2025.html">[NEW] [01-05-2025] Heart Keeper Release - My first game on steam!</a>
+      </center>
     </div>
 
     <div class="footer">
